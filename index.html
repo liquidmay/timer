@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="inline">
+      <div class="set1">
+        <label for="minuteSet"></label>
+        <input
+          type="number"
+          name="minuteSet"
+          id="minuteSet"
+          min="1"
+          max="60"
+          value=""
+        />
+        <h3>분</h3>
+      </div>
+      <div class="set2">
+        <label for="secondSet"></label>
+        <input
+          type="number"
+          name="secondSet"
+          id="secondSet"
+          min="1"
+          max="60"
+          value="1"
+        />
+        <h3>초</h3>
+      </div>
+    </div>
+    <button type="submit" value="submit" class="btn"><h2>시작</h2></button>
+    <h1 class="result">00 : 00</h1>
+    <script src="script.js"></script>
+  </body>
+</html>
