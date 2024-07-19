@@ -20,11 +20,12 @@ function updateResult() {
     .toString()
     .padStart(2, "0")} : ${secondValue.toString().padStart(2, "0")}`;
 
-  // 기존에 실행 중인 setInterval을 중지
+  // * 기존에 실행 중인 setInterval을 중지(반복해서 작동하지 않도록 도와줌)
   clearInterval(intv);
 
   // 새로운 setInterval 설정
   intv = setInterval(function () {
+    subBtn.setAttribute("disabled", true); // * 실행되는 동안 버튼이 작동되지 않도록 함
     if (secondValue > 0) {
       secondValue--;
     } else {
@@ -34,6 +35,7 @@ function updateResult() {
       } else {
         clearInterval(intv); // 타이머 중지
         alert("타이머가 종료되었습니다."); // 예시로 경고 메시지 추가
+        subBtn.removeAttribute("disabled"); // * 타이머 작동이 끝나면 버튼이 재활성화됨
       }
     }
     actualRslt.textContent = `${minuteValue
